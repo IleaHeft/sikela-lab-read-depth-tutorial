@@ -32,7 +32,7 @@ mkdir results
 - Michael: The sample list currently in the config.sh script reflects the current set of samples we want to analyze
 
 ## 6. Adjust the #BSUB –J line in each script as necessary to run the desired jobs and the desired number of jobs at one time
-- Michael: I have a few of the samples running on our cluster, but it is pretty bogged down right now.  If you could run samples 50-116, that would be great! 
+- Michael: I have some of the samples running on our cluster, but it is pretty busy right now.  If you could run samples 30-116, that would be great! 
 
 ## 7.  Run the code  
 1.  ```bsub < code/1000genomes/1_batch_bowtie.sh```      
