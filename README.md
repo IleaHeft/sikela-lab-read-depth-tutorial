@@ -3,7 +3,7 @@
 This is a tutorial to teach others how to run the read depth pipeline currently used by the Sikela Lab
 
 ## 1. Obtain the code for running the pipeline  
-- Clone the code from https://github.com/dpastling/plethora.git  
+- Clone this repository: 
 
 ## 2. Make necessary directories within the “plethora” directory  
 ```
