@@ -5,7 +5,7 @@ This is a tutorial on how to run the read depth pipeline currently used by the S
 ## 1. Ensure necessary versions of programming tools/languages are installed
 - bowtie2 version 2.2.9  
 - samtools 1.3
-- bedtools v2.25.0
+- bedtools v2.25.0  
 Note: A version of the code that was made for earlier versions of samtools(version: 0.1.19-44428cd) and bedtools(version 2.17.0) is available at https://github.com/dpastling/plethora.  For detailed information on the changes I made from the code at https://github.com/dpastling/plethora see docs/changes-for-newer-samtools-bedtools.md
 
 ## 2. Create a home directory for the project
@@ -15,7 +15,7 @@ mkdir "name of home directory"
 - Clone this repository: 
 - Download the bowtie2 index files from this dropbox folder: 
 
-## 2. Make necessary directories within the your project directory  
+## 4. Make necessary directories within the your project directory  
 ```
 mkdir fastq
 ```
@@ -28,15 +28,13 @@ mkdir alignments
 ```
 mkdir results
 ```  
-## 3. Modify the file paths and sample list in the code/1000genomes/config.sh script as necessary
-- Michael: The sample list currently in the config.sh script is up to date. I have a few of the samples running on our cluster, but it is pretty bogged down right now.  If you could run samples 50-116, that would be great! 
+## 5. Modify the file paths and sample list in the code/1000genomes/config.sh script as necessary
+- Michael: The sample list currently in the config.sh script reflects the current set of samples we want to analyze
 
-## 4. Adjust the #BSUB –J line in each script as necessary to run the desired jobs and the desired number of jobs at one time
+## 6. Adjust the #BSUB –J line in each script as necessary to run the desired jobs and the desired number of jobs at one time
+- Michael: I have a few of the samples running on our cluster, but it is pretty bogged down right now.  If you could run samples 50-116, that would be great! 
 
-## 4. Download the bowtie2 index from the this reponsitory
-
-
-## 6.  Run the code  
+## 7.  Run the code  
 1.  bsub < code/1000genomes/1_batch_bowtie.sh  
 2.  bsub < code/1000genomes/2_batch_make_bed.sh  
 3.  Run the GC correction code (Code to run the GC correction currently has a bug in it, whill update this when it is fixed, can run steps 1 and 2 in the meantime without any problem).  
