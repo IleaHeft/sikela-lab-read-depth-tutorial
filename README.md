@@ -12,7 +12,7 @@ Note: A version of the code that was made for earlier versions of samtools(versi
 mkdir "name of home directory"
 
 ## 3. Obtain the code and other necessary files for running the pipeline  
-- Clone this repository: git clone https://github.com/IleaHeft/sikela-lab-read-depth-tutorial.git
+- Clone this repository: ```git clone https://github.com/IleaHeft/sikela-lab-read-depth-tutorial.git```
 - Download the bowtie2 index files from this dropbox folder: 
 
 ## 4. Make necessary directories within the your project directory  
