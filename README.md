@@ -35,8 +35,8 @@ mkdir results
 - Michael: I have a few of the samples running on our cluster, but it is pretty bogged down right now.  If you could run samples 50-116, that would be great! 
 
 ## 7.  Run the code  
-1.  bsub < code/1000genomes/1_batch_bowtie.sh  
-2.  bsub < code/1000genomes/2_batch_make_bed.sh  
+1.  ```bsub < code/1000genomes/1_batch_bowtie.sh```      
+2.  ```bsub < code/1000genomes/2_batch_make_bed.sh```  
 3.  Run the GC correction code (Code to run the GC correction currently has a bug in it, whill update this when it is fixed, can run steps 1 and 2 in the meantime without any problem).  
 - If desired, clean up files (code exists to do this, but it isn't clear to me right now what the best way to run the code is, will update this)
 
