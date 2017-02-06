@@ -42,8 +42,10 @@ gc.model <- X %>%
 X <- left_join(X, gc.model, by = c("percent.gc"))
 
 # extend gc model for low and high gc regions
-k.gc.min <- gc.model[min(gc.model[["percent.gc"]], "k.gc"]
-k.gc.max <- gc.model[max(gc.model[["percent.gc"]], "k.gc"]
+k.gc.min <- filter(gc.model, percent.gc == min(percent.gc))
+k.gc.max <- filter(gc.model, percent.gc == max(percent.gc))
+k.gc.min <- k.gc.min[["k.gc"]]
+k.gc.max <- k.gc.max[["k.gc"]]
 X <- mutate(X, k.gc = ifelse(percent.gc < min.gc, k.gc.min, k.gc))
 X <- mutate(X, k.gc = ifelse(percent.gc >= max.gc, k.gc.max, k.gc))
 X <- mutate(X, k.gc = ifelse(is.na(k.gc), 1, k.gc))
@@ -51,7 +53,9 @@ X <- mutate(X, k.gc = ifelse(is.na(k.gc), 1, k.gc))
 X <- mutate(X, corrected.coverage = log(coverage) * k.gc)
 X <- mutate(X, corrected.coverage = exp(corrected.coverage))
 
-haploid.coverage <- median(X[grep("^((baseline)|(uc))", X[["domain"]]), "corrected.coverage"]) / 2
+haploid.coverage <- filter(X, grepl("((baseline)|(uc))", domain))
+haploid.coverage <- haploid.coverage[["corrected.coverage"]]
+haploid.coverage <- median(haploid.coverage) /2
 
 X <- mutate(X, corrected.coverage = corrected.coverage / haploid.coverage)
 
