@@ -5,6 +5,7 @@
 #BSUB -R "select[mem>40] rusage[mem=40]"
 #BSUB -q normal
 #BSUB -P Sikela
+#BSUB -n 12
 
 # catch unset variables, non-zero exits in pipes and calls, enable x-trace.
 set -o nounset -o pipefail -o errexit -x
