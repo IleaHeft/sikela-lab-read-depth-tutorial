@@ -37,7 +37,7 @@ mkdir results
 ## 7.  Run the code  
 1.  ```bsub < code/1000genomes/1_batch_bowtie.sh```      
 2.  ```bsub < code/1000genomes/2_batch_make_bed.sh```  
-3.  Run the GC correction code (Code to run the GC correction currently has a bug in it, whill update this when it is fixed, can run steps 1 and 2 in the meantime without any problem).  
+3.  ```bsub < code/1000genomes/4_batch_gc_correction.sh```
 - If desired, clean up files (code exists to do this, but it isn't clear to me right now what the best way to run the code is, will update this)
 
 
