@@ -28,7 +28,7 @@ shift $((OPTIND - 1))
 
 if [ "$pairing" == "paired" ]
 then
-    samtools sort -n -@ 5 -m 5G -o ${output}_sorted.bam $bam
+    samtools sort -n -@ 12 -m 2G -o ${output}_sorted.bam $bam
     bedtools bamtobed -split -bedpe -i ${output}_sorted.bam > $output.bed
     code/merge_pairs.pl $output.bed
 elif [ "$pairing" == "single" ]
