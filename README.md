@@ -1,6 +1,10 @@
 # sikela-lab-read-depth-tutorial
 
-This is a tutorial on how to run the read depth pipeline currently used by the Sikela Lab
+This is a tutorial on how to run the read depth pipeline currently used by the Sikela Lab. The eventual goal of this tutorial is for an individual with only minimal programming knowledge to be able to succesfully analyze copy number variation with this pipeline. 
+
+See https://github.com/dpastling/plethora for original code and usage license.  The details will be published in the forthcoming paper:
+
+Astling, DP, Heft IE, Jones, KL, Sikela, JM. "High resolution measurement of DUF1220 domain copy number from whole genome sequence data" (2017) BMC Genomics. under review
 
 ## 1. Ensure necessary versions of programming tools/languages are installed
 - bowtie2 version 2.2.9  
