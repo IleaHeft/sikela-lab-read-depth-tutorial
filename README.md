@@ -1,6 +1,6 @@
 # sikela-lab-read-depth-tutorial
 
-This is a tutorial on how to run the read depth pipeline currently used by the Sikela Lab. The eventual goal of this tutorial is for an individual with only minimal programming knowledge to be able to succesfully analyze copy number variation with this pipeline. It also includes instrucions directed as specific individuals currently working on projects.
+This is a tutorial on how to run the read depth pipeline currently used by the Sikela Lab. The eventual goal of this tutorial is for an individual with only minimal programming knowledge to be able to succesfully analyze copy number variation with this pipeline. It also includes instrucions directed at specific individuals currently working on projects.
 
 See https://github.com/dpastling/plethora for original code and usage license.  The details will be published in the forthcoming paper:
 
@@ -19,7 +19,7 @@ mkdir "name of home directory"
 - Clone this repository: ```git clone https://github.com/IleaHeft/sikela-lab-read-depth-tutorial.git```
 - Download the bowtie2 index files from this dropbox folder: 
 
-## 4. Make necessary directories within the your project directory  
+## 4. Make necessary directories within your project directory  
 ```
 mkdir fastq
 ```
