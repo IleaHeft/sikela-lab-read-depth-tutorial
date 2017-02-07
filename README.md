@@ -1,6 +1,6 @@
 # sikela-lab-read-depth-tutorial
 
-This is a tutorial on how to run the read depth pipeline currently used by the Sikela Lab. The eventual goal of this tutorial is for an individual with only minimal programming knowledge to be able to succesfully analyze copy number variation with this pipeline. 
+This is a tutorial on how to run the read depth pipeline currently used by the Sikela Lab. The eventual goal of this tutorial is for an individual with only minimal programming knowledge to be able to succesfully analyze copy number variation with this pipeline. It also includes instrucions directed as specific individuals currently working on projects.
 
 See https://github.com/dpastling/plethora for original code and usage license.  The details will be published in the forthcoming paper:
 
@@ -36,7 +36,10 @@ mkdir results
 - Michael: The sample list currently in the config.sh script reflects the current set of samples we want to analyze
 
 ## 6. Adjust the #BSUB –J line in each script as necessary to run the desired jobs and the desired number of jobs at one time
-- Michael: I have some of the samples running on our cluster, but it is pretty busy right now.  If you could run samples 30-116, that would be great! 
+Current job run plan:  
+- Ilea: 1-30  
+- Michael: 31-90  
+- Ilea or Michael, whoever is ready first:  91-115
 
 ## 7.  Run the code  
 1.  ```bsub < code/1000genomes/1_batch_bowtie.sh```      
