@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-#BSUB -J coverage[1]
+#BSUB -J coverage[1-30]%5
 #BSUB -e logs/coverage_%J.log
 #BSUB -o logs/coverage_%J.out
-#BSUB -R "select[mem>40] rusage[mem=40]"
+#BSUB -R "select[mem>40] rusage[mem=40] span[hosts=1]"
 #BSUB -q normal
 #BSUB -P Sikela
 #BSUB -n 12
