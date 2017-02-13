@@ -1,6 +1,10 @@
 # sikela-lab-read-depth-tutorial
 
-This is a tutorial on how to run the read depth pipeline currently used by the Sikela Lab
+This is a tutorial on how to run the read depth pipeline currently used by the Sikela Lab. The eventual goal of this tutorial is for an individual with only minimal programming knowledge to be able to succesfully analyze copy number variation with this pipeline. It also includes instrucions directed at specific individuals currently working on projects.
+
+See https://github.com/dpastling/plethora for original code and usage license.  The details will be published in the forthcoming paper:
+
+Astling, DP, Heft IE, Jones, KL, Sikela, JM. "High resolution measurement of DUF1220 domain copy number from whole genome sequence data" (2017) BMC Genomics. under review
 
 ## 1. Ensure necessary versions of programming tools/languages are installed
 - bowtie2 version 2.2.9  
@@ -15,7 +19,7 @@ mkdir "name of home directory"
 - Clone this repository: ```git clone https://github.com/IleaHeft/sikela-lab-read-depth-tutorial.git```
 - Download the bowtie2 index files from this dropbox folder: 
 
-## 4. Make necessary directories within the your project directory  
+## 4. Make necessary directories within your project directory  
 ```
 mkdir fastq
 ```
@@ -32,12 +36,15 @@ mkdir results
 - Michael: The sample list currently in the config.sh script reflects the current set of samples we want to analyze
 
 ## 6. Adjust the #BSUB –J line in each script as necessary to run the desired jobs and the desired number of jobs at one time
-- Michael: I have some of the samples running on our cluster, but it is pretty busy right now.  If you could run samples 30-116, that would be great! 
+Current job run plan:  
+- Ilea: 1-30  
+- Michael: 31-90  
+- Ilea or Michael, whoever is ready first:  91-115
 
 ## 7.  Run the code  
 1.  ```bsub < code/1000genomes/1_batch_bowtie.sh```      
 2.  ```bsub < code/1000genomes/2_batch_make_bed.sh```  
-3.  Run the GC correction code (Code to run the GC correction currently has a bug in it, whill update this when it is fixed, can run steps 1 and 2 in the meantime without any problem).  
+3.  ```bsub < code/1000genomes/4_batch_gc_correction.sh```
 - If desired, clean up files (code exists to do this, but it isn't clear to me right now what the best way to run the code is, will update this)
 
 
