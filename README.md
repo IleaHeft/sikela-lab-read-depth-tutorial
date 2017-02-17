@@ -25,7 +25,8 @@ mkdir "name of home directory"
 
 ## 3. Obtain the code and other necessary files for running the pipeline  
 - Clone this repository: ```git clone https://github.com/IleaHeft/sikela-lab-read-depth-tutorial.git```
-- Download the bowtie2 index files from this dropbox folder: 
+
+## 3. Build bowtie index files for hg38
 
 ## 4. Make necessary directories within your project directory  
 ```
@@ -41,13 +42,8 @@ mkdir alignments
 mkdir results
 ```  
 ## 5. Modify the file paths and sample list in the code/1000genomes/config.sh script as necessary
-- Michael: The sample list currently in the config.sh script reflects the current set of samples we want to analyze
 
 ## 6. Adjust the #BSUB –J line in each script as necessary to run the desired jobs and the desired number of jobs at one time
-Current job run plan:  
-- Ilea: 1-30  
-- Michael: 31-90  
-- Ilea or Michael, whoever is ready first:  91-115
 
 ## 7.  Run the code  
 1.  ```bsub < code/1000genomes/1_batch_bowtie.sh```      
