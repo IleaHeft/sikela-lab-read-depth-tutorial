@@ -10,6 +10,14 @@ Astling, DP, Heft IE, Jones, KL, Sikela, JM. "High resolution measurement of DUF
 - bowtie2 version 2.2.9  
 - samtools 1.3
 - bedtools v2.25.0  
+- Perl:  
+  Math::Random  
+  Math::Complex  
+- R:  
+    dplyr
+
+
+
 Note: A version of the code that was made for earlier versions of samtools(version: 0.1.19-44428cd) and bedtools(version 2.17.0) is available at https://github.com/dpastling/plethora.  For detailed information on the changes I made from the code at https://github.com/dpastling/plethora see docs/changes-for-newer-samtools-bedtools.md
 
 ## 2. Create a home directory for the project

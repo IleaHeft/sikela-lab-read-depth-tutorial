@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#BSUB -J align[4-12]%5
+#BSUB -J align[3]
 #BSUB -e logs/bowtie2_%J.log
 #BSUB -o logs/bowtie2_%J.out
 #BSUB -R "select[mem>5] rusage[mem=5] span[hosts=1]"
