@@ -9,7 +9,8 @@ Astling, DP, Heft IE, Jones, KL, Sikela, JM. "High resolution measurement of DUF
 ## 1. Ensure necessary versions of programming tools/languages are installed
 - bowtie2 version 2.2.9  
 - samtools 1.3
-- bedtools v2.25.0  
+- bedtools v2.25.0
+- cutadapt v1.12
 - Perl:  
   Math::Random  
   Math::Complex  
