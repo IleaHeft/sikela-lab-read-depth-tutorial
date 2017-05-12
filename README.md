@@ -17,10 +17,6 @@ Astling, DP, Heft IE, Jones, KL, Sikela, JM. "High resolution measurement of DUF
 - R:  
     dplyr
 
-
-
-Note: A version of the code that was made for earlier versions of samtools(version: 0.1.19-44428cd) and bedtools(version 2.17.0) is available at https://github.com/dpastling/plethora.  For detailed information on the changes I made from the code at https://github.com/dpastling/plethora see docs/changes-for-newer-samtools-bedtools.md
-
 ## 2. Create a home directory for the project
 mkdir "name of home directory"
 
